@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Apr 13 20:47:04 2020
-
-@author: EUNHANJO
-"""
-
 import cv2
 import numpy as np
 import pytesseract
@@ -167,6 +161,11 @@ from flask import Flask,render_template,request
 from werkzeug.utils import secure_filename
 app=Flask(__name__)
 
+@app.route('/')
+def returntxt():
+    return find_dr(finding_letters2(image));
+
+"""
 @app.route('/uploading')
 def render_file():
     return render_template('uploading.html')
@@ -196,14 +195,14 @@ for item in file_list:
 @app.route('/result')
 def resulting():
     return txt
-
+"""
 
 if __name__=='__main__':
     app.run()
   
 
 
-
+"""
 import os
 path_dir='C:/Users/EUNHANJO/Flask_test/uploaded'
 file_list=os.listdir(path_dir)
@@ -217,7 +216,7 @@ for item in file_list:
 #txt=(find_dr(finding_letters2(str)))        
     
 
-"""
+
 
 
 
