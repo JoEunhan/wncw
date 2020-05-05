@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import cv2
 import numpy as np
 import pytesseract
@@ -12,7 +11,7 @@ import os
 # image url to download
 url = "https://firebasestorage.googleapis.com/v0/b/wncw-f04a4.appspot.com/o/images%2Fdrug.png?alt=media&"
 # file path and file name to download
-outpath = "C: desktop/test/"
+outpath = "C:test/"
 outfile = "drug.jpg"
 
 # Create when directory does not exist
@@ -101,7 +100,7 @@ def result(r):
     resulta=resulta.upper()
     return (resulta)
 
-image =r'C:\Users\EUNHANJO\Desktop\ test\drug.jpg'
+image =r'C:\Users\EUNHANJO\Flask_test\test\drug.jpg'
 
 
 #print(finding_letters2(image))
